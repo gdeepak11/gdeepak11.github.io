@@ -1,450 +1,489 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128496346-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-128496346-1');
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak Gangadharan</title>
+    <meta name="keywords" content="IoT, Real-Time Systems, Performance Analysis, Multimedia MPSoC Platforms">
+    <meta name="description" content="Deepak Gangadharan - Assistant Professor at IIIT Hyderabad">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128496346-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-128496346-1');
+    </script>
 
-<title> Deepak Gangadharan </title>
-<meta name="keywords" content="IoT, Real-Time Systems, Performance Analysis, Multimedia MPSoC Platforms"></meta>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-33330018-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
 
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+        }
+
+        .header-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header-text p {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-links {
+            margin-top: 15px;
+        }
+
+        .contact-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .contact-links a:hover {
+            opacity: 0.8;
+        }
+
+        .announcement {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .announcement p {
+            color: #856404;
+            margin: 0;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p, li {
+            line-height: 1.8;
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .student-category {
+            margin-bottom: 25px;
+        }
+
+        .student-category u {
+            font-weight: 600;
+            color: #764ba2;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+
+        .publication-list {
+            list-style: none;
+        }
+
+        .publication-list li {
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .publication-list strong {
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .header-text h1 {
+                font-size: 1.8em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            header {
+                padding: 20px 10px;
+                margin-bottom: 20px;
+            }
+
+            section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                display: block;
+                text-align: center;
+            }
+
+            .contact-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .contact-links a {
+                margin: 5px;
+            }
+
+            .header-content {
+                padding: 10px;
+            }
+
+            p, li {
+                font-size: 0.95em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-text h1 {
+                font-size: 1.5em;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            h3 {
+                font-size: 1em;
+            }
+
+            section {
+                padding: 12px;
+            }
+
+            .container {
+                padding: 8px;
+            }
+
+            p, li {
+                font-size: 0.9em;
+            }
+
+            nav {
+                padding: 10px;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
 </head>
 
+<body>
+    <div class="container">
+        <header id="header">
+            <div class="header-content">
+                <img src="deepak_photo.jpg" alt="Deepak Gangadharan" class="profile-pic">
+                <div class="header-text">
+                    <h1>Deepak Gangadharan</h1>
+                    <p><strong>Assistant Professor</strong></p>
+                    <p>IIIT Hyderabad</p>
+                    
+                    <div class="contact-info">
+                        <p><strong>Address:</strong></p>
+                        <p>A5-303, Computer Systems Group<br>
+                        International Institute of Information Technology<br>
+                        Gachibowli, Hyderabad 500032, INDIA</p>
+                        <p><strong>Email:</strong> deepak.g AT iiit DOT ac DOT in</p>
+                    </div>
 
-<body bgcolor="white" text="black">
+                    <div class="contact-links">
+                        <a href="CV.pdf">📄 CV</a>
+                        <a href="Research_Vision.pdf">📋 Research Statement</a>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-<script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
-   <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
-   <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css'
-       media="screen" />
-       <div><br/></div>
-   <div class="col-sm-2 col-md-6 col-xs-2" style="border: 5px solid #eee; margin: 5px">
-      
-           <div class="col-sm-2 col-md-4 col-xs-4" style="padding: 5px">
-               <img alt="Deepak's pic" src="deepak_photo.jpg" style="position:absolute; left:0px; top:5px; width:175px; height:190px;" />
-           </div>
-          
-          
-           <div class="col-sm-8 col-md-8 col-xs-14"  >
-               
-<p>
-                  <b>Deepak Gangadharan</b><br>
-                  Assistant Professor<br>
-                  IIIT Hyderabad<br>
-				  <br>
-                  <b>Address:</b><br>
-                  A5-303<br>
-                  Computer Systems Group<br>
-                  International Institute of Information Technology<br>
-                  Gachibowli, Hyderabad 500032, INDIA<br>
-                  
-                  <b>Email:</b>deepak.g AT iiit DOT ac DOT in <br>
-				  <a href="CV.pdf"> CV</a> &nbsp;&nbsp;<a href="Research_Vision.pdf"> Research Statement</a><br>
-			   </p>
-           </div>
-       
-   </div>
+        <div class="announcement">
+            <p><strong>🎓 Accepting research students and interns!</strong> Please contact me if you find my research interesting.</p>
+        </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="col-*-12" style=" margin: 10px">
+        <nav>
+            <a href="#bio">About Me</a>
+            <a href="#research">Research Interests</a>
+            <a href="research.html">Research Projects</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#students">Students</a>
+            <a href="#publications">Publications</a>
+            <a href="#service">Professional Service</a>
+        </nav>
 
-<p><b>I am accepting research students and interns now. Please contact me if you find my research interesting.</b><br>
-<!--<p><b><sup><span style="font-size:200%;color:yellow;">&starf;</span></sup>I have a JRF/PhD position opening as part of a DST project. Please find the advertisement <a href="https://gdeepak11.github.io/JRF.jpeg"> here</a>(</font><font color="red">Deadline Extended</font>)&nbsp;</b></p>
-<br>-->	
-<a href="#Bio"> About Me</a>&nbsp;&nbsp;<a href="#Research"> Research Interests</a>&nbsp;&nbsp;<a href="https://gdeepak11.github.io/research.html"> Research Projects</a>&nbsp;&nbsp;<a href="#Teaching"> Teaching</a>&nbsp;&nbsp;<a href="#Students"> Students</a>&nbsp;&nbsp;<a href="#Publications"> Publications</a>&nbsp;&nbsp;<a href="#Service"> Professional Service</a>&nbsp;&nbsp;<a href="https://gdeepak11.github.io/gallery.html"> Gallery</a>
+        <section id="bio">
+            <h2>About Me</h2>
+            <p>I am an Assistant Professor at IIIT Hyderabad since September 2019. Prior to this, I have been a Postdoctoral Researcher at University of Pennsylvania working on real-time systems and edge computing.</p>
 
+            <p>I obtained my PhD degree in <a href="http://www.comp.nus.edu.sg">School of Computing</a> at <a href="http://www.nus.edu.sg">National University of Singapore</a> and was advised by leading researchers in real-time systems.</p>
 
-<a id="Bio">
-<h2> About Me </h2></a>
-I am an Assistant Professor at IIIT Hyderabad since September 2019.<br> Prior to this, I have been a Postdoctoral Researcher at University of Pennsylvania working with <a href="http://www.cis.upenn.edu/~lee/home/home/index.shtml">Prof Insup Lee</a>, and at <a href="http://www.compute.dtu.dk/english/research/ese">Embedded Systems Engineering Section of DTU Informatics</a> and <a href = "https://www.cs12.tf.fau.eu/">Hardware Software Codesign Department of University of Erlangen, Nuremberg.</a><br>
+            <p>Prior to my PhD, I conducted research on <strong>Hardware-efficient reconfigurable architectures for image processing algorithms</strong>. I also worked as a Senior Design Engineer at Conexant Systems Inc., where I was involved in design and verification of ASIC and FPGA IP cores for optical communication protocols.</p>
 
-<br>
+            <p>I obtained a Bachelor of Technology in Electronics and Communication from <a href="http://www.cet.ac.in">College of Engineering, Trivandrum, India</a>.</p>
+        </section>
 
-I obtained my PhD degree in <a href="http://www.comp.nus.edu.sg">School of Computing</a> at <a href="http://www.nus.edu.sg">National University of Singapore</a> and was advised by <a href="https://www.comp.nus.edu.sg/~rogerz/">Prof Roger Zimmermann</a>. My PhD thesis title was <b>Quality-aware performance analysis of multimedia MPSoC platforms</b>.<br>
+        <section id="research">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Scalable Design and Performance Analysis of Edge-based IoT systems</li>
+                <li>Analysis and Design of Real-Time Systems/Cyber-Physical Systems</li>
+                <li>Design Methodologies for Embedded Systems</li>
+                <li>Intelligent Transportation Systems</li>
+            </ul>
+        </section>
 
-<br>
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <ul>
+                <li><a href="https://mooc.indiaeu-ictstandards.in/courses/onem2m/">MOOC on oneM2M</a> ⭐</li>
+                <li>Computer Systems Organization (Spring 2021-2026)</li>
+                <li>Embedded Systems Workshop (Monsoon 2025)</li>
+                <li>Intro to Processor Architecture (Spring 2021-2025)</li>
+                <li>Software Programming for Performance (Spring 2021)</li>
+                <li>Real-Time Systems (Monsoon 2020-2022)</li>
+                <li>Introduction to IoT (Spring 2020, 2022, 2023, Monsoon 2021)</li>
+            </ul>
+        </section>
 
-Prior to my PhD, I have conducted research on <b>Hardware-efficient reconfigurable architectures for image processing algorithms</b>.<br>
-I also worked as a Senior Design Engineer at Conexant Systems Inc., where I was involved in design and verification of ASIC and FPGA IP cores for optical communication protocols.<br>
-Prior to that, I obtained a degree in Bachelor of Technology in Electronics and Communication from <a href="http://www.cet.ac.in/home.php">College of Engineering, Trivandrum, India</a>.
+        <section id="students">
+            <h2>Students</h2>
+            
+            <div class="student-category">
+                <u>PhD</u>
+                <p>Sudarshan Srinivasan (2024 - ?)</p>
+            </div>
 
+            <div class="student-category">
+                <u>MS</u>
+                <p>Ashish Sharma (07/2023 - ?)</p>
+            </div>
 
-<a id = "Research">
-<h2> Research Interests </h2></a>
-Scalable Design and Performance Analysis of Edge-based IoT systems<br>
-Analysis and Design of Real-Time Systems/Cyber-Physical Systems<br>
-Design Methodologies for Embedded Systems<br>
-Intelligent Transportation Systems
+            <div class="student-category">
+                <u>Dual Degree</u>
+                <p>Pranav Kannan (CSD), K Pavan Kumar (ECD), Tejah S S (ECD), Arihant Jain (ECD), Sahil (ECD), Vedant Tejas (ECD), Aman Srivastava (CSD), Jayakanth M V (ECD)</p>
+            </div>
 
-<a id = "Teaching">
-<h2> Teaching </h2></a>
-<a href="https://mooc.indiaeu-ictstandards.in/courses/onem2m/">MOOC on oneM2M</a><sup><span style="font-size:100%;color:orange;">&starf;</span></sup><br>
-Computer Systems Organization (Spring 2021-2026)<br>
-Embedded Systems Workshop (Monsoon 2025)<br>
-Intro to Processor Architecture (Spring 2021-2025)<br>
-Software Programming for Performance (Spring 2021)<br>	
-Real-Time Systems (Monsoon 2020-2022)<br>	
-Introduction to IoT (Spring 2020,2022,2023,Monsoon 2021)
+            <div class="student-category">
+                <u>Alumni (Recent)</u>
+                <p>Sai Usha Nagasri Goparaju (MS) - Edge-based Algorithm Innovations for Intelligent Transportation Systems (08/2021 - 06/2024)</p>
+                <p>SVSLN Surya Suhas Vaddhiparthy (MS) - Connected Vehicles & Vehicular Edge Computing (08/2021 - 06/2024)</p>
+                <p>Rahul Biju (MS) - Traffic Flow Forecasting (08/2022 - 06/2025)</p>
+                <p>Sridhar M (CS Dual) - Data Age Analysis in Real-Time Systems (2021-2024)</p>
+                <p>Joseph John Cherukara (CS Dual) - Resource Allocation for Vehicular Edge Computing (2021-2024)</p>
+            </div>
+        </section>
 
-	
-<a id = "Students">	
-<h2> Students </h2></a>	
-<u> PhD</u><br>
-Sudarshan Srinivasan (2024 - ?)<br><br>
-	
-<u> MS</u><br>
-Ashish Sharma (07/2023 - ?)<br><br>
-	
-<u> Dual Degree</u><br>
-Pranav Kannan (CSD), K Pavan Kumar (ECD), Tejah S S (ECD), Arihant Jain (ECD), Sahil (ECD), Vedant Tejas (ECD), Aman Srivastava (CSD), Jayakanth M V (ECD)<br><br>
-	
-<u> Alumni</u><br>
-Sai Usha Nagasri Goparaju (MS) - Thesis Topic: Edge-based Algorithm Innovations for Intelligent Transportation Systems - A Safety and Efficiency Perspective (08/2021 - 06/2024) (First Position: AI Engineer in Equitable Technologies)<br>
-SVSLN Surya Suhas Vaddhiparthy (MS) - Thesis Topic: Over the Horizon of Connected Vehicles: Advancing Security, Reliability, and Cost-Efficiency through Vehicular Edge Computing (08/2021 - 06/2024) (First Position: Data Scientist in Kshema General Insurance)<br>
-Rahul Biju (MS) - Thesis Topic: Prediction and Generation Models for Traffic Flow Forecasting (08/2022 - 06/2025)<br><br>	
-	
-Sridhar M (CS Dual Degree) - Thesis Topic: Data Age Formulation and Analysis in Real-Time Embedded Systems - Fault tolerant and Thermal aware perspectives (2021-2024) (First Position: Software Engineer in Kore.ai)<br>
-Joseph John Cherukara (CS Dual Degree) - Thesis Topic: Efficient Resource Allocation Frameworks for Data and Service Delivery to Connected Vehicles in Vehicular Edge Computing (2021-2024) (First Position: Software Engineering Intern at Tata Elxsi)<br>
-VJS Pranavasri (CS Dual Degree) - Thesis Topic: Towards Scalable Architectures in oneM2M-based Interoperability deployments in Smart Cities (2023-2024) (First Position: Software Engineer in Apple)<br>
-Akshaj Gupta (CS Dual Degree) - Thesis Topic: Fast Heuristic Algorithms for Efficient Allocation of RSU resources in Vehicular Edge Computing (2020-2022) (First Position: Product Analyst in Zeta)<br>
-Rhuthik P (ECE Dual Degree) - Thesis Topic: Resource and Power-Efficient Lane Detection Techniques for Cost-constrained Vehicular System (2022-2025) (First Position: Software Engineer in Equal Identity)<br>
-Tanniru Abhinav Siddharth (ECE Dual Degree) - Thesis Topic: Efficient Computation Offloading in Vehicular Edge Computing: Scheduling and Reinforcement Learning-based Approaches (2023-2025) (First Position: R&D Software Engineer in ideaForge)<br><br>	
+        <section id="publications">
+            <h2>Publications</h2>
 
-Keerthi Pothalaraju (ECE Honors) (2022-2024) (First Position: Software Engineer in Apple)<br>
-Shriya Dullur (ECE Honors) (2022-2024) (First Position: Software Engineer in Microsoft)<br>
-Kethu Sesha Sarath Reddy (ECE Honors) (2022-2024) (First Position: Data Science Engineer in Gramener)<br>
-Hema Leela Durga Koppisetti (CS Honors) (2022-2024) (First Position: Software Developer in Flipkart)<br>
-Pravalika Mukkiri (CS Honors) (2021-2023) (First Position: MS@ASU)<br>
-MC Bhavana (CS Honors) (2021-2023)<br>
-Stella Devarakonda (CS Honors) (2021-2023) (First Position: SDE in Plivo)<br>
+            <h3>Book Chapter</h3>
+            <ul class="publication-list">
+                <li><strong>Hierarchical Scheduling</strong> - JinHyun Kim, Deepak Gangadharan, Kyong Hoon Kim, Insik Shin and Insup Lee. Handbook of Real-Time Computing, 2019.</li>
+            </ul>
 
-	
-<a id = "Publications">
-<h2> Publications </h2></a>
-	
-<h3>Book Chapter</h3>
-<UL>
+            <h3>Recent Journal Articles</h3>
+            <ul class="publication-list">
+                <li><strong>Reinforcement Learning for Traffic Signal Control</strong> - Saidulu Thadikamalla, Piyush Joshi and Deepak Gangadharan. The Journal of Supercomputing, 2025.</li>
+                <li><strong>Energy-Aware Operational Decisions for Automated Guided Vehicles</strong> - KyuJin Kyung et al. ITU Journal on Future and Evolving Technologies, 2025.</li>
+                <li><strong>Edge-Server Workload Characterization in Vehicular Computation Offloading</strong> - BaekGyu Kim and Deepak Gangadharan. IEEE Access, 2024.</li>
+            </ul>
 
-<LI>JinHyun Kim, Deepak Gangadharan, Kyong Hoon Kim, Insik Shin and Insup Lee<br>
-<b>Hierarchical Scheduling</b><br>
-Handbook of Real-Time Computing, 2019<br>	
-</LI></UL>
+            <h3>Recent Conference Papers</h3>
+            <ul class="publication-list">
+                <li><strong>Performance Evaluation of Interoperability and Control Implementation for IoT-Based Smart Spaces</strong> - Sasidhar Varada et al. FiCloud, 2026.</li>
+                <li><strong>LMS-AR: LMS Prediction-based Adaptive Regulator</strong> - Sudarshan Srinivasan, Deepak Gangadharan and Dip Goswami. IEEE RTCSA, 2026.</li>
+                <li><strong>From GPU to Microcontroller: Online Ridge Regression for Edge-Deployable Traffic Prediction</strong> - Suresh Purini et al. IEEE ITSC, 2026.</li>
+            </ul>
 
-<h3>Journal</h3>
-<UL>
-<LI>Saidulu Thadikamalla, Piyush Joshi and Deepak Gangadharan<br>
-<b>Reinforcement Learning for Traffic Signal Control: Advancing Efficiency through Hybrid Exploration Strategies</b><br>
-Accepted in The Journal of Supercomputing, 2025<br>
-	
-&nbsp;<LI>KyuJin Kyung, GaHyun Lee, SeongJae Chu, Joseph John Cherukara, SVSLN Surya Suhas Vaddhiparthy, Tanniru Abhinav Siddharth, Deepak Gangadharan and BaekGyu Kim<br>
-<b>Towards Energy-Aware Operational Decisions for Automated Guided Vehicles: A Review</b><br>
-ITU Journal on Future and Evolving Technologies, 2025<br>
+            <p><a href="#publications">View all publications →</a></p>
+        </section>
 
-&nbsp;<LI>BaekGyu Kim and Deepak Gangadharan<br>
-<b>Edge-Server Workload Characterization in Vehicular Computation Offloading: Semantics and Empirical Analysis</b><br>
-IEEE Access, 2024<br>
+        <section id="service">
+            <h2>Professional Service</h2>
+            <p><strong>Session Chair:</strong> IEEE Cloud 2018, IEEE VTC-Fall 2023</p>
+            <p><strong>Program Committee:</strong> MOMAC 2016, IEEE Cloud 2018, IEEE BigMM 2020, IEEE MASS 2020, IEEE HiPC 2022, IEEE ANTS 2022-2023, IEEE SmartGridComm 2024, NG-RES 2025-2026</p>
+            <p><strong>Conference Reviewer:</strong> IEEE ITSC 2026, IEEE CLOUD, RTSS 2017, EMSOFT 2017-2018, DAC 2013-2016, DATE 2013-2017, RTAS 2014, ASAP 2014, CODES+ISSS 2014</p>
+            <p><strong>Journal Reviewer:</strong> IEEE Transactions on Multimedia, Pattern Recognition, IEEE TCAS, VLSI Design, ACM TECS, IEEE TCAD, ACM Computing Surveys, IEEE Computer</p>
+        </section>
 
-&nbsp;<LI>Andreas Weichslgartner, Stefan Wildermann, Deepak Gangadharan, Michael Glass and Juergen Teich<br>
-<b>A Design-Time/Run-Time Application Mapping Methodology for Predictable Execution Time in MPSoCs</b><br>
-ACM Transactions on Embedded Computing Systems (TECS), 2018<br>
+        <footer>
+            <p>&copy; 2024 Deepak Gangadharan. All rights reserved.</p>
+            <p>IIIT Hyderabad | <a href="mailto:deepak.g@iiit.ac.in">deepak.g@iiit.ac.in</a></p>
+        </footer>
+    </div>
 
-&nbsp;<LI> Lech Jozwiak, Menno Lindwer, Rosilde Corvino, Paolo Meloni, Laura Micconi, Jan Madsen, Erkan Diken, Deepak Gangadharan, Roel Jordans et. al.<br>
-<b>ASAM: Automatic Architecture Synthesis and Application Mapping</b><br>
-Microprocessors and Microsystems - Embedded Hardware Design 37(8-C), 2013<br>
-</LI></UL>
+    <!-- Analytics -->
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33330018-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 
-<h3> Conference </h3>
-<UL>
-
-<LI>Sasidhar Varada, Ushasri Mogadali, Deepak Gangadharan, Sachin Chaudhari, Karthik Vaidhyanathan and Anuradha Vattem<br>
-<b>Performance Evaluation of Interoperability and Control Implementation for IoT-Based Smart Spaces</b><br>
-Accepted in 13th International Conference on Future Internet of Things and Cloud (FiCloud), 2026<br>
-	
-&nbsp;<LI> Sudarshan Srinivasan, Deepak Gangadharan and Dip Goswami<br>
-<b>LMS-AR: LMS Prediction-based Adaptive Regulator for Memory Bandwidth in Multicore Systems (Short Paper)</b><br>
-Accepted in 32nd IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA), 2026<br>
-
-&nbsp;<LI>Suresh Purini, Archit Narwadkar and Deepak Gangadharan<br>
-<b>From GPU to Microcontroller: Online Ridge Regression for Edge-Deployable Traffic Prediction</b><br>
-Accepted in 29th IEEE International Conference on Intelligent Transportation Systems (ITSC), 2026<br>
-	
-&nbsp;<LI>Arihant Jain, Geethika Palla and Deepak Gangadharan<br>
-<b>Efficient Time Series Transformer Architecture for Generalised Two-Wheeler Driving Event Recognition</b><br>
-Accepted in 103rd IEEE Vehicular Technology Conference (VTC-Spring), 2026<br>
-	
-&nbsp;<LI>Abia Abraham, Rahul Biju and Deepak Gangadharan<br>
-<b>A Dual-Stream Temporal Feature Fusion Network for Multi-Class Traffic Flow Prediction</b><br>
-Accepted in 103rd IEEE Vehicular Technology Conference (VTC-Spring), 2026<br>
-	
-&nbsp;<LI>K Pavan Kumar and Deepak Gangadharan<br>
-<b>Network Traversal Time (NTT) Analysis of ST Flows with Non-Zero Arrival Jitter in TSN networks</b><br>
-18th International Conference on Verification and Evaluation of Computer and Communication Systems (VECoS), 2025<br>
-	
-&nbsp;<LI>Khader Zaahid Umar, Swetha Gangineni, Raja Vara Prasad Yerra, Purav Shah, Ramona Trestian, Hrishikesh Venkataraman and Deepak Gangadharan<br>
-<b>Real-Time Performance Analysis of V2V and V2I-2V Architectures for Smart Communities</b><br>
-19th IEEE International Conference on Vehicular Electronics and Safety (ICVES), 2025<br>
-	
-&nbsp;<LI>Rhuthik P and Deepak Gangadharan<br>
-<b>RL-ALMS: Reinforcement Learning-based Adaptive and Lightweight Model Selection Framework for Energy-Efficient Lane Detection in Electric Vehicles</b><br>
-28th Euromicro Conference on Digital System Design (DSD), 2025<br>
-
-&nbsp;<LI> Tanniru Abhinav Siddharth and Deepak Gangadharan<br>
-<b>HAPTA: Adaptive Learning based Horizontal Computation Offloading over RSUs in VEC</b><br>
-101st IEEE Vehicular Technology Conference (VTC-Spring), 2025<br>
-	
-&nbsp;<LI>Munjaal Bhatt, Aakash Maniar, Aditya Mulgundkar, Harikumar Kandath and Deepak Gangadharan<br>
-<b>Sensor Based Active Fault Tolerant Controller for Hexacopters</b><br>
-11th International Conference on Automation, Robotics and Applications (ICARA), 2025<br>
-	
-&nbsp;<LI>Kyujin Kyung, Deepak Gangadharan and BaekGyu Kim<br>
-<b>Preliminary Modeling of Energy-Aware Integrated Allocations in Robotic Mobile Fulfillment Systems (Poster paper)</b><br>
-30th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA), 2024<br>
-	
-&nbsp;<LI>Tanniru Abhinav Siddharth, Kethu Sesha Sarath Reddy, Joseph John Cherukara and Deepak Gangadharan<br>
-<b>Online Partitioned Scheduling over RSU for Computation Offloading in Vehicular Edge Computing</b><br>
-100th IEEE Vehicular Technology Conference (VTC-Fall), 2024<br>
-	
-&nbsp;<LI>Rhuthik P, SVSLN Surya Suhas Vaddhiparthy, Pranav Kannan and Deepak Gangadharan<br>
-<b>S<sup>2</sup>P : Two-Stage Superpixel Algorithm for Enhanced Lane Detection on Resource Constraint Edges</b><br>
-14th IEEE International Symposium on Industrial Embedded Systems (SIES), 2024<br>
-	
-&nbsp;<LI>Ashish Sharma, SVSLN Surya Suhas Vaddhiparthy, Sai Usha Goparaju, Deepak Gangadharan and Harikumar Kandath<br>
-<b>Attention Meets UAVs: A Comprehensive Evaluation of DDoS Detection in Low-Cost UAVs</b><br>
-20th IEEE International Conference on Automation Science and Engineering (CASE), 2024<br>
-	
-&nbsp;<LI> Rahul Biju, Sai Usha Goparaju, Deepak Gangadharan and Bappaditya Mandal<br>
-<b>Grid LSTM based Attention Modelling for Traffic Flow Prediction</b><br>
-99th IEEE Vehicular Technology Conference (VTC-Spring), 2024<br>
-	
-&nbsp;<LI>VJS Pranavasri, Leo Francis, Gaurav Pal, Ushasri Mogadali, Anuradha Vattem, Karthik Vaidhyanathan and Deepak Gangadharan<br>
-<b>Exploratory Study of oneM2M-based Interoperability Architectures for IoT in Smart Cities</b><br>
-21st IEEE International Conference on Software Architecture (Software Architecture in Practice Track), 2024<br>
-	
-&nbsp;<LI>Sridhar Mallareddy, Pavan Kumar Kondooru and Deepak Gangadharan<br>
-<b>Checkpointing-Aware End-to-End Data Age Analysis of Task Chains under Transient Faults</b><br>
-27th IEEE International Symposium on Real-Time Distributed Computing (ISORC), 2024<br>
-	
-&nbsp;<LI>Shivaan Sehgal, Aakash Maniar, Harikumar Kandath and Deepak Gangadharan<br>
-<b>Leveraging Latent Temporal Features for Robust Fault Detection and Isolation in Hexacopter UAVs</b><br>
-10th International Conference on Automation, Robotics and Applications (ICARA), 2024<br>
-	
-&nbsp;<LI>SVSLN Surya Suhas Vaddhiparthy, Joseph John Cherukara, Deepak Gangadharan and BaekGyu Kim<br>
-<b>Collision-Aware Data Delivery Framework for Connected Vehicles via Edges</b><br>
-98th IEEE Vehicular Technology Conference (VTC-Fall), 2023<br>
-	
-&nbsp;<LI>Joseph John Cherukara, SVSLN Surya Suhas Vaddhiparthy, Deepak Gangadharan and BaekGyu Kim<br>
-<b>Dynamic Data Delivery Framework for Connected Vehicles via Edge Nodes with Variable Routes</b><br>
-98th IEEE Vehicular Technology Conference (VTC-Fall), 2023<br>
-	
-&nbsp;<LI>Sai Usha Goparaju, Keerthi Pothalraju, Shriya Dullur, Arihant Jain and Deepak Gangadharan<br>
-<b>Time-Series based Fall Detection in Two-Wheelers</b><br>
-98th IEEE Vehicular Technology Conference (VTC-Fall), 2023<br>
-	
-&nbsp;<LI>VJS Pranavasri, Leo Francis, Ushasri Mogadali, Gaurav Pal, SVSLN Surya Suhas Vaddhiparthy, Anuradha Vattem, Karthik Vaidhyanathan and Deepak Gangadharan<br>
-<b>Scalable and Interoperable Distributed Architecture for IoT in Smart Cities</b><br>
-9th IEEE World Forum on Internet of Things (WF-IoT), 2023<br>
-	
-&nbsp;<LI>BaekGyu Kim and Deepak Gangadharan<br>
-<b>Regular-Empirical Composite Workload Analysis for RSU-Assisted Computation Offloading in Connected Vehicle Services (Short Paper)</b><br>
-IEEE International Symposium on Workload Characterization (IISWC), 2023<br>
-
-&nbsp;<LI>Mayank Singh, Aditya Mulgundkar, Munjaal Bhatt, Prudhvi Raj Turlapati, Deepak Gangadharan and Harikumar Kandath<br>
-<b>Fault Detection and Isolation on a Hexacopter UAV using a Two-stage classification method</b><br>
-19th IEEE International Conference on Automation Science and Engineering (CASE), 2023<br>
-	
-&nbsp;<LI>SVSLN Surya Suhas Vaddhiparthy, Sreya Garapati, Prudhvi Raj Turlapati, Deepak Gangadharan and Harikumar Kandath<br>
-<b>A Comprehensive Evaluation on the Impact of Various Spoofing Scenarios on GPS Sensors in a Low-Cost UAV</b><br>
-19th IEEE International Conference on Automation Science and Engineering (CASE), 2023<br>
-	
-&nbsp;<LI>Avijit Ashe, Srikanth Goli, Harikumar Kandath and Deepak Gangadharan<br>
-<b>Multivariate Data Analysis for Motor Failure Detection and Isolation in a Multicopter UAV using Real-Flight Attitude Signals</b><br>
-International Conference on Unmanned Aircraft Systems (ICUAS), 2023<br>
-	
-&nbsp;<LI> Sai Usha Goparaju, Rahul Biju, Pravalika M, Bhavana MC, Deepak Gangadharan, Bappaditya Mandal and Pradeep C<br>
-<b>Optimization and Performance Evaluation of Hybrid Deep Learning Models for Traffic Flow Prediction</b><br>
-97th IEEE Vehicular Technology Conference (VTC-Spring), 2023<br>
-	
-&nbsp;<LI> Sai Usha Goparaju, Lakshmanan L, Abhinav Navnit, Rahul Biju, Lovish Bajaj, Deepak Gangadharan and Aftab Hussain<br>
-<b>Time Series-based Driving Event Recognition for Two Wheelers (Extended Abstract)</b><br>
-Design, Automation and Test in Europe (DATE), 2023<br>
-	
-&nbsp;<LI>Shubham Mante, SVSLN Surya Suhas Vaddhiparthy, Ruthwik Muppala, Deepak Gangadharan, Aftab Hussain and Anuradha Vattem<br>
-<b>A Multi Layer Data Platform Architecture for Smart Cities using oneM2M and IUDX</b><br>
-8th IEEE World Forum on Internet of Things (WF-IoT), 2022<br>
-	
-&nbsp;<LI>Akshaj Gupta, Joseph John Cherukara, Deepak Gangadharan, BaekGyu Kim, Oleg Sokolsky and Insup Lee<br>
-<b>Global Edge Bandwidth Cost Gradient-based Heuristic for Fast Data Delivery to Connected Vehicles under Vehicle Overlaps</b><br>
-95th IEEE Vehicular Technology Conference (VTC-Spring), 2022<br>	
-	
-&nbsp;<LI> Shubham Mante, Nathalie Hernandez, Aftab Hussain, Sachin Chaudhari, Deepak Gangadharan and Thierry Monteil<br> 
-<b>5D-IoT, a Semantic Web Based Framework for Assessing IoT Data Quality (Poster paper)</b><br>
-37th ACM/SIGAPP Symposium On Applied Computing (SAC), 2022<br>
-	
-&nbsp;<LI> Sai Usha Nagasri Goparaju, SVSLN Surya Suhas Vaddhiparthy, Pradeep C, Anuradha Vattem and Deepak Gangadharan<br>
-<b>Design of an IoT System for Machine Learning Calibrated TDS Measurement in Smart Campus</b><br>
-7th IEEE World Forum on Internet of Things (WF-IoT), 2021<br>
-	
-&nbsp;<LI>Akshaj Gupta, Joseph John Cherukara, Deepak Gangadharan, BaekGyu Kim, Oleg Sokolsky and Insup Lee<br>
-<b>E-PODS: A Fast Heuristic for Data/Service Delivery in Vehicular Edge Computing</b><br>
-93rd IEEE Vehicular Technology Conference (VTC-Spring), 2021<br>
-
-&nbsp;<LI>Deepak Gangadharan, Oleg Sokolsky, Insup Lee, BaekGyu Kim, Chung-Wei Lin and Shinichi Shiraishi<br>
-<b>Bandwidth Optimal Data/Service Delivery for Connected Vehicles via Edges</b><br>
-11th IEEE Internation Conference on Cloud Computing (CLOUD), 2018<br>
-
-&nbsp;<LI>Dagaen Golomb, Deepak Gangadharan, Sanjian Chen, Oleg Sokolsky and Insup Lee<br>
-<b>Data Freshness Over-Engineering: Formulation and Results</b><br>
-21st IEEE International Symposium on Real-Time Computing (ISORC), 2018 <b>(Best Paper Award)</b><br>
-
-&nbsp;<LI>JinHyun Kim, Deepak Gangadharan, Oleg Sokolsky, Axel Legay and Insup Lee<br>
-<b>Extensible Energy Planning Framework for Preemptive Task</b><br>
-20th IEEE International Symposium on Real-Time Computing (ISORC), 2017<br>
-
-&nbsp;<LI>Deepak Gangadharan, JinHyun Kim, Oleg Sokolsky, BaekGyu Kim, Chung-Wei Lin, Shinichi Shiraishi and Insup Lee<br>
-<b>Platform-based Plug and Play of Automotive Safety Features: Challenges and Directions (Invited Paper)</b><br>
-22nd IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA), 2016<br>
-
-&nbsp;<LI>Deepak Gangadharan, Oleg Sokolsky, Insup Lee, BaekGyu Kim, Chung-Wei Lin, Shinichi Shiraishi<br>
-<b>Platform-based Automotive Safety Features</b><br>
-SAE World Congress, 2016<br>
-
-&nbsp;<LI>Andreas Weichslgartner, Deepak Gangadharan, Stefan Wildermann, Michael Glass and Juergen Teich<br>
-<b>DAARM: Design-Time Application Analysis and Run-Time Mapping for Predictable Execution in Many-Core Systems</b><br>
-9th International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS), 2014<br>
-
-&nbsp;<LI>Deepak Gangadharan, Ericles Sousa, Vahid Lari, Frank Hannig and Juergen Teich<br>
-<b>Application-driven Reconfiguration of Shared Resources for Timing Predictability of MPSoC Platforms</b><br>
-48th Asilomar Conference on Signals, Systems and Computers, 2014<br>
-
-&nbsp;<LI>Ericles Sousa, Deepak Gangadharan, Frank Hannig and Juergen Teich<br>
-<b>Runtime Reconfigurable Bus Arbitration for Concurrent Applications on Heterogeneous MPSoC Architectures</b><br>
-17th Euromicro Conference on Digital System Design Conference (DSD), 2014<br>
-
-&nbsp;<LI>Deepak Gangadharan, Samarjit Chakraborty and Juergen Teich<br>
-<b>Quality-aware Video Decoding on Thermally-constrained MPSoC Platforms</b><br>
-25th IEEE International Conference on Application-specific Systems, Architectures and Processors (ASAP), 2014<br>
-
-&nbsp;<LI>Deepak Gangadharan, Laura Micconi, Paul Pop and Jan Madsen<br>
-<b>Multi-ASIP Platform Synthesis for Event-Triggered Applications with Cost/Performance Trade-offs</b><br>
-19th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA), 2013<br>
-
-&nbsp;<LI>Laura Micconi, Deepak Gangadharan, Paul Pop and Jan Madsen<br>
-<b>Multi-ASIP Platform Synthesis for Real-Time Applications</b><br>
-8th IEEE International Symposium on Industrial Embedded Systems (SIES), 2013<br>
-
-&nbsp;<LI>Balaji Raman, Ayoub Nouri, Deepak Gangadharan, Marius Bozga et. al.<br>
-<b>Stochastic Modeling and Performance Analysis of Multimedia SoCs</b><br>
-13th International Conference on Embedded Computer Systems: Architectures, Modeling, and Simulation (SAMOS), 2013<br>
-
-&nbsp;<LI>Deepak Gangadharan, Samarjit Chakraborty and Roger Zimmermann<br>
-<b>Quality-Aware Media Scheduling on MPSoC Platforms</b> <br>
-Design, Automation and Test in Europe (DATE), Grenoble, France, March 2013<br>
-
-&nbsp;<LI>Lech Jozwiak, Menno Lindwer, Rosilde Corvino, Paolo Meloni, Laura Micconi, Jan Madsen, Erkan Diken, Deepak Gangadharan, Roel Jordans et. al.<br>
-<b>ASAM: Automatic Architecture Synthesis and Application Mapping</b><br>
-15th Euromicro Conference on Digital System Design (DSD), 2012<br>
-
-&nbsp;<LI>Haiyang Ma, Deepak Gangadharan, Nalini Venkatasubramanian and Roger Zimmermann<br>
-<b>Energy-aware complexity adaptation for mobile video calls</b> <b>(Short paper)</b> <br>
-ACM Multimedia, Arizona, USA, November 2011<br>
-
-&nbsp;<LI>Deepak Gangadharan, Ma Haiyang, Samarjit Chakraborty and Roger Zimmermann<br>
-<b>Video Quality-Driven Buffer Dimensioning in MPSoC Platforms via Prioritized Frame Drops</b><br>
-29th IEEE International Conference on Computer Design (ICCD), Amherst, USA, October 2011<br>
-
-&nbsp;<LI>Balaji Raman, Guillaume Quintin, Wei Tsang Ooi, Deepak Gangadharan, Jerome Milan and Samarjit Chakraborty<br>
-<b>On Buffering with Stochastic Guarantees in Resource-Constrained Media Players</b><br>
-International Conference on Hardware-Software Codesign and System Synthesis (CODES+ISSS), Taipei, Taiwan, October 2011<br>
-
-&nbsp;<LI>Deepak Gangadharan, Linh T. X. Phan, Samarjit Chakraborty, Roger Zimmermann and Insup Lee<br>
-<b>Video Quality Driven Buffer Sizing via Frame Drops</b><br>
-17th IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA), Toyama, Japan, August 2011<br>
-
-&nbsp;<LI>Deepak Gangadharan, Samarjit Chakraborty and Roger Zimmermann<br>
-<b>Fast Hybrid Simulation for Accurate Decoded Video Quality Assessment on MPSoC Platforms with Resource Constraints</b><br>
-16th Asia and South Pacific Design Automation Conference (ASP-DAC), Yokohama, Japan, January 2011<br>
-
-&nbsp;<LI>Deepak Gangadharan, Samarjit Chakraborty and Roger Zimmermann<br>
-<b>Fast Model-Based Test Case Classification for Performance Analysis of Multimedia MPSoC Platforms</b><br>
-International Conference on Hardware-Software Codesign and System Synthesis (CODES+ISSS), Grenoble, France, October 2009<br>
-
-&nbsp;<LI> Deepak, G., Meher, P.K. and Sluzek, A.<br>
-<b>Performance Characteristics of Parallel and Pipelined Implementation of FIR Filters in FPGA Platform</b><br>
-8th International Symposium on Signals, Circuits and Systems (ISSCS), July 2007<br>
-
-&nbsp;<LI> Deepak, G., Mahesh, R. and Sluzek, A.<br>
-<b>Adaptable Area-Efficient Parallel Architecture for Grey and Color Image Convolvers</b><br>
-8th International Symposium on Signals, Circuits and Systems (ISSCS), July 2007<br>
-
-&nbsp;<LI> Deepak, G., Mahesh, R. and Sluzek, A.<br>
-<b>Design of an Area-Efficient Multiplierless Processing Element For Fast Two Dimensional Image Convolution</b><br>
-13th IEEE International Conference on Electronics, Circuits and Systems (ICECS), December 2006</LI></UL>
-
-<h3> Miscellaneous </h3>
-<UL>
-<LI>Hiya Bhatt, Sahil Sahoo, Karthik Vaidhyanathan, Rahul Biju, Deepak Gangadharan, Ramona Trestian and Purav Shah<br>
-<b>Architecting Digital Twins for Intelligent Transportation Systems</b><br>
-Accepted in 4th International Workshop on Architecting and Engineering Digital Twins (AEDT), 2025<br>
-	
-&nbsp;<LI>Likhith Kanigolla, Gaurav Pal, Karthik Vaidhyanathan, Deepak Gangadharan and Anuradha Vattem<br>
-<b>Architecting Digital Twin for Smart City Systems: A Case Study</b><br>
-3rd International Workshop on Digital Twin Architecture (TwinArch) and Digital Twin Engineering (DTE), 2024<br>
-
-&nbsp;<LI>Deepak Gangadharan, Oleg Sokolsky, Insup Lee and BaekGyu Kim<br>
-<b>Social Welfare-based Optimization for Data/Service Delivery to Connected Vehicles via Edges</b><br>
-1st International Workshop on Trustworthy and Real-time Edge Computing for Cyber-Physical Systems (TREC4CPS), December 2018<br>
-
-&nbsp;<LI>Deepak Gangadharan, Alexandru Tanase, Frank Hannig and Juergen Teich<br>
-<b>Timing Analysis of a Heterogeneous Architecture with Massively Parallel Processor Arrays</b><br>
-DATE Workshop on Performance, Power and Predictability of Many-Core Embedded Systems (3PMCES), 2014
-
-</LI></UL>
-
-
-<a id = "Service">
-<h3>Professional Service</h3></a>
-<b>Session Chair</b> - IEEE Cloud 2018, IEEE VTC-Fall 2023<br>
-<b>Program Committee</b> - MOMAC 2016, IEEE Cloud Work-in-Progress 2018, IEEE BigMM 2020, IEEE MASS 2020, IEEE HiPC 2022, IEEE ANTS 2022-2023, IEEE SmartGridComm 2024, NG-RES 2025-2026<br>
-<b>Conference Reviewer</b> - IEEE ITSC 2026, IEEE CLOUD: 2018, RTSS: 2017, EMSOFT: 2017-2018, DAC: 2013-2014,2016, DATE: 2013-2017, RTAS: 2014, ASAP: 2014, CODES+ISSS: 2014, 
-SCOPES: 2014,<br> 
-                             ESTIMedia: 2014, MMSP: 2011<br>
-<b>Expert Reviewer</b> - EMSOFT 2014<br>
-<b>Journal Reviewer</b> - IEEE Transactions on Multimedia, Pattern Recognition, IEEE TCAS, VLSI Design, Journal of Multimedia, ACM TECS, IEEE TCAD, ACM Computing Surveys, IEEE Computer, ACM TODAES<br>
-
-</div>
-	
-<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101213512);</script>
-<script async src="//static.getclicky.com/js"></script>
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101213512ns.gif" /></p></noscript>	
-
+    <script>
+        var clicky_site_ids = clicky_site_ids || [];
+        clicky_site_ids.push(101213512);
+    </script>
+    <script async src="//static.getclicky.com/js"></script>
+    <noscript><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101213512ns.gif" /></noscript>
 </body>
+
 </html>
