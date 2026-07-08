@@ -27,8 +27,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: #444;
+            background-color: #f5f7fa;
         }
 
         .container {
@@ -38,12 +38,12 @@
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #a8c5e8 0%, #d4b8e8 100%);
+            color: #2c3e50;
             padding: 40px 20px;
             margin-bottom: 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
         }
 
         .header-content {
@@ -65,18 +65,21 @@
         .header-text h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
+            color: #2c3e50;
         }
 
         .header-text p {
             font-size: 1.1em;
             margin-bottom: 8px;
+            color: #34495e;
         }
 
         .contact-info {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.7);
             padding: 15px;
             border-radius: 5px;
             margin-top: 15px;
+            color: #2c3e50;
         }
 
         .contact-info p {
@@ -88,7 +91,7 @@
         }
 
         .contact-links a {
-            color: #fff;
+            color: #2c3e50;
             text-decoration: none;
             margin: 0 15px;
             font-weight: 500;
@@ -96,19 +99,19 @@
         }
 
         .contact-links a:hover {
-            opacity: 0.8;
+            opacity: 0.7;
         }
 
         .announcement {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
+            background: #e8f4f8;
+            border-left: 4px solid #7fb8d4;
             padding: 15px;
             margin-bottom: 30px;
             border-radius: 4px;
+            color: #2c5aa0;
         }
 
         .announcement p {
-            color: #856404;
             margin: 0;
         }
 
@@ -117,7 +120,7 @@
             padding: 15px;
             margin-bottom: 30px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -125,14 +128,15 @@
         }
 
         nav a {
-            color: #667eea;
+            color: #6c8ebf;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #764ba2;
+            color: #5a7aa8;
+            text-decoration: underline;
         }
 
         section {
@@ -140,19 +144,19 @@
             padding: 30px;
             margin-bottom: 25px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
         }
 
         h2 {
-            color: #667eea;
+            color: #6c8ebf;
             font-size: 1.8em;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
+            border-bottom: 2px solid #c5d9f0;
         }
 
         h3 {
-            color: #764ba2;
+            color: #8fa3c4;
             font-size: 1.3em;
             margin-top: 25px;
             margin-bottom: 15px;
@@ -173,13 +177,13 @@
         }
 
         a {
-            color: #667eea;
+            color: #6c8ebf;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         a:hover {
-            color: #764ba2;
+            color: #5a7aa8;
             text-decoration: underline;
         }
 
@@ -189,7 +193,7 @@
 
         .student-category u {
             font-weight: 600;
-            color: #764ba2;
+            color: #8fa3c4;
             text-decoration: none;
             display: block;
             margin-bottom: 10px;
@@ -203,12 +207,29 @@
         .publication-list li {
             margin-bottom: 15px;
             padding-left: 15px;
-            border-left: 3px solid #667eea;
+            border-left: 3px solid #c5d9f0;
             padding-bottom: 10px;
         }
 
         .publication-list strong {
-            color: #333;
+            color: #2c3e50;
+        }
+
+        .view-all-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #e8f1f8;
+            color: #6c8ebf;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .view-all-link:hover {
+            background: #d4e3f0;
+            text-decoration: none;
         }
 
         footer {
@@ -217,7 +238,7 @@
             color: #666;
             background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
         }
 
         @media (max-width: 768px) {
@@ -367,11 +388,11 @@
 
         <section id="bio">
             <h2>About Me</h2>
-            <p>I am an Assistant Professor at IIIT Hyderabad since September 2019. Prior to this, I have been a Postdoctoral Researcher at University of Pennsylvania working on real-time systems and edge computing.</p>
+            <p>I am an Assistant Professor at IIIT Hyderabad since September 2019. Prior to this, I have been a Postdoctoral Researcher at University of Pennsylvania working on real-time systems [...]
 
-            <p>I obtained my PhD degree in <a href="http://www.comp.nus.edu.sg">School of Computing</a> at <a href="http://www.nus.edu.sg">National University of Singapore</a> and was advised by leading researchers in real-time systems.</p>
+            <p>I obtained my PhD degree in <a href="http://www.comp.nus.edu.sg">School of Computing</a> at <a href="http://www.nus.edu.sg">National University of Singapore</a> and was advised by [...]
 
-            <p>Prior to my PhD, I conducted research on <strong>Hardware-efficient reconfigurable architectures for image processing algorithms</strong>. I also worked as a Senior Design Engineer at Conexant Systems Inc., where I was involved in design and verification of ASIC and FPGA IP cores for optical communication protocols.</p>
+            <p>Prior to my PhD, I conducted research on <strong>Hardware-efficient reconfigurable architectures for image processing algorithms</strong>. I also worked as a Senior Design Engineer[...]
 
             <p>I obtained a Bachelor of Technology in Electronics and Communication from <a href="http://www.cet.ac.in">College of Engineering, Trivandrum, India</a>.</p>
         </section>
@@ -449,7 +470,7 @@
                 <li><strong>From GPU to Microcontroller: Online Ridge Regression for Edge-Deployable Traffic Prediction</strong> - Suresh Purini et al. IEEE ITSC, 2026.</li>
             </ul>
 
-            <p><a href="#publications">View all publications →</a></p>
+            <a href="publications.html" class="view-all-link">→ View all publications</a>
         </section>
 
         <section id="service">
